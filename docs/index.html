@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function scrollToSection(sectionId) {
+        const targetSection = document.getElementById(sectionId);
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'  // 设置平滑滚动
+        });
+    }
+     </script>
+
+<style>
+    body{
+    background-color: rgb(205, 248, 255);
+}
+    #gue{
+         height: 100px;
+         display: flex; /* 使用弹性布局 */
+         flex-direction: row; /* 使用横向布局 */
+         background-color: #0559d6; /* 设置背景颜色 */
+         border-radius: 20px; /* 设置圆角大小 */
+         opacity: 0.85; /* 设置透明度 */
+        
+
+    }
+
+    #gue li{
+        flex: 1; 
+        line-height: 55px; 
+        display: inline-block;
+
+    }
+    #gue a {
+        display: block;
+        text-align: center; /* 设置文本或行内元素在父容器内水平居中 */
+        font-size: 25px; /* 设置字体大小 */
+        color: white; /* 设置字体颜色 */
+        transition: all 0.3s ease; /* 为所有可过渡的属性设置平滑的过渡效果和持续时间 */
+
+    }
+    #gue ul li a :hover{
+        color: red;
+        border-radius: 20px;
+
+    }
+
+
+    #box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1500px;
+        height: 700px;
+        background-image:           url("https://img1.baidu.com/it/u=3947719013,1523181138&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500");
+        background-size: 1500px 700px;
+        
+
+    }
+    #biao{
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+     }
+    
+    #biao img{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+
+    }
+    #hahaha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background-color: rgb(72, 143, 190);
+    }
+    #hahaha #zhi{
+        font-size: medium;
+        color: #000;
+        
+    }
+    #player{
+        display: flex; /* 使用弹性布局 */
+        flex-direction: column; /* 使用纵向布局 */
+        margin: 0 auto; /* 设置元素在父容器内的上下外边距和左右外边距。“auto”表示居中 */
+        padding: 20px; /* 设置容器内边距。1个值：上下左右,2个值：上下、左右,4个值：上、右、下、左 */
+        width: 100%; /* 设置宽度。“px”：设置元素宽度固定大小;“%”：设置元素宽度相对于父容器宽度的百分比 */
+        align-items: center; /* 设置元素在交叉轴上居中对齐 */
+        justify-content: center; /* 设置元素在主轴上居中对齐 */
+        gap: 20px; /* 设置元素间距 */
+        width: 100%; /* 设置宽度。“px”：设置元素宽度固定大小;“%”：设置元素宽度相对于父容器宽度的百分比 */
+        max-width: 100%; /* 设置最大宽度 */
+        box-sizing: border-box; /* 包括内边距在宽度计算中 */
+}
+    #player #biti{
+        position: relative; /* 使用相对定位 */
+        display: flex; /* 使用弹性布局 */
+        margin: 40px auto; /* 设置元素在父容器内的上下外边距和左右外边距。“auto”表示居中 */
+        padding: 20px 0;  /* 设置容器内边距。1个值：上下左右,2个值：上下、左右,4个值：上、右、下、左 */
+        width: 100%; /* 设置宽度。“px”：设置元素宽度固定大小;“%”：设置元素宽度相对于父容器宽度的百分比 */
+        height: 200px; /* 设置高度。“px”：设置元素高度固定大小;“%”：设置元素高度相对于父容器高度的百分比 */
+        justify-content: center; /* 设置元素在主轴上居中对齐 */
+        align-items: center; /* 设置元素在交叉轴上居中对齐 */
+        font-weight: bold; /* 字体加粗 */
+        font-size: 56px; /* 设置字体大小 */
+        color: #00008b; /* 设置字体颜色 */
+        z-index: 2; /* 设置堆叠层级。堆叠层级越大,图层越靠上 */
+        background: transparent; /* 设置背景透明 */
+
+
+
+
+    }
+    #player.intro-container.card{
+        display: flex; /* 使用弹性布局 */
+    margin: 0 auto; /* 水平居中 */
+    margin-bottom: 30px; /* 设置底部外间距 */
+    padding: 20px 30px; /* 设置容器内边距。1个值：上下左右,2个值：上下、左右,4个值：上、右、下、左 */
+    align-items: center; /* 设置元素在交叉轴上居中对齐 */
+    justify-content: space-between; /* 设置元素在主轴上间距相等,而且第一个和最后一个元素分别紧贴容器的两端 */
+    border: 4px solid #7f7c7c; /* 设置边框(粗细、样式、颜色) */
+    background-color: #fff; /* 设置背景颜色 */
+    border-radius: 20px; /* 设置圆角大小 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 设置阴影(X轴偏移量,Y轴偏移量,模糊程度,颜色) */
+    width: 95%; 
+    max-width: 1000px; /* 设置最大宽度 */
+    min-height: 400px; /* 设置最小高度 */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+    
+
+
+
+
+    }
+    #player.intro-container.card:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 设置阴影(X轴偏移量,Y轴偏移量,模糊程度,颜色) */
+    transform: scale(1.05)!; /* 设置鼠标悬停时元素的放大倍数 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 为transform和box-shadow属性设置平滑的过渡效果和持续时间 */
+
+
+
+
+
+    }
+    #player.intro-container.card img{
+    width: 200px; /* 设置宽度。“px”：设置元素宽度固定大小;“%”：设置元素宽度相对于父容器宽度的百分比 */
+    height: auto; 
+    margin-right: 20px; /* 设置右侧外边距 */
+    border-radius: 10px; /* 设置圆角大小 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 设置阴影(X轴偏移量,Y轴偏移量,模糊程度,颜色) */
+    background: none; /* 移除背景 */
+    box-shadow: none; /* 移除阴影 */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* 为transform和box-shadow属性设置平滑的过渡效果和持续时间 */
+
+
+
+    }
+    #player.intro-container.card img:hover{
+    transform: scale(1.05) rotate(-15deg); /* 设置鼠标悬停时元素的放大倍数和旋转角度 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 设置阴影(X轴偏移量,Y轴偏移量,模糊程度,颜色) */
+    background: none; /* 移除背景 */
+    box-shadow: none; /* 移除阴影 */
+}
+#player .intro-container .card-text{
+
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+    #player .intro-container .card-text h1 {
+    margin-bottom: 10px; /* 设置底部外间距 */
+    font-size: 30px; /* 设置字体大小 */ 
+    color: #222 ; /* 设置字体颜色 */
+}
+    #player .intro-container .card-text p {
+    line-height: 1.8; /* 设置行高 */
+    font-size: 20px; /* 设置字体大小 */
+    color: #030303; /* 设置字体颜色 */
+}
+    #history{
+    width: 1500px;
+    height: 700px;
+    background-image: url("12345 (1).jpg");
+    background-size: 1500px 700px;
+    opacity: 0.4;
+
+
+
+
+
+}
+#aibi{
+        position: relative; /* 使用相对定位 */
+        display: flex; /* 使用弹性布局 */
+        margin: 40px auto; /* 设置元素在父容器内的上下外边距和左右外边距。“auto”表示居中 */
+        padding: 20px 0;  /* 设置容器内边距。1个值：上下左右,2个值：上下、左右,4个值：上、右、下、左 */
+        width: 100%; /* 设置宽度。“px”：设置元素宽度固定大小;“%”：设置元素宽度相对于父容器宽度的百分比 */
+        height: 200px; 
+        justify-content: center; /* 设置元素在主轴上居中对齐 */
+        align-items: center; 
+        font-weight: bold; /* 字体加粗 */
+        font-size: 56px; /* 设置字体大小 */
+        color: #00008b; /* 设置字体颜色 */
+        z-index: 2;
+        background: transparent; /* 设置背景透明 */
+}
+#history p{
+    font-size: 30px;
+    color: #760707;
+
+}
+#vovo{
+        position: relative; 
+        display: flex;
+        margin: 40px auto; 
+        padding: 20px 0;  
+        width: 100%; 
+        height: 200px; 
+        justify-content: center; 
+        align-items: center; 
+        font-weight: bold; 
+        font-size: 56px; 
+        color: #00008b; 
+        z-index: 2;
+        background: transparent; }
+
+           
+</style>
+
+
+</head>
+<body>
+    
+    <div id="gue">
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="scrollToSection('player')">球队球员 <i class="fa fa-angle-down"></i></a></li>
+                <li><a href="javascript:void(0);" onclick="scrollToSection('aibi')">球队历史<i class="fa fa-angle-down"></i></a></li>
+                <li><a href="javascript:void(0);" onclick="scrollToSection('vovo')">精彩视频 <i class="fa fa-angle-down"></i></a></li>
+            </ul>
+         </nav>
+        
+    </div>
+    
+    <div id="box">
+        <div id="biao">
+         <img src="https://img1.baidu.com/it/u=905312087,2322228642&fm=253&app=120&size=w931&n=0&f=PNG&fmt=auto?sec=1733418000&t=d438dbdb5fcbffc40dd2c0431785270a" alt="">
+
+        </div>
+
+
+    </div>
+
+
+    <div id="hahaha">
+        <a href="https://baike.baidu.com/item/%E8%BE%BE%E6%8B%89%E6%96%AF%E7%8B%AC%E8%A1%8C%E4%BE%A0%E9%98%9F/22316155?fr=aladdin">
+            <div id="zhi">
+                <h1>欢迎来到独行侠的主场</h1>
+                <h2>welcome to dalles</h2>
+            </div>
+
+
+        </a>
+        
+
+
+    </div>
+
+
+    <div id="player">
+        <div id="biti">Teamplayers</div>
+        <div class="intro-container">
+            <div class="card">
+                <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1671578534,3292978541&fm=179&app=42&f=PNG?w=275&h=200&s=DB22B04647333788104A309D0300F0E9" alt="wu">
+                <div class="card-text">
+                    <a href="https://weibo.com/tv/show/1034:5088235752456235"><h1>欧文</h1></a>
+                    <p>
+                        <strong class="blue-title">kyrie lrving</strong>
+                        <br><br>
+                        凯里·欧文属于突破犀利的得分型控卫，拥有顶级的控球技术；球风华丽
+                        <br>
+                        2018-19赛季最佳阵容第二阵容
+                        2014-15赛季最佳阵容第三阵容
+                        2011-12赛季最佳新秀
+                        2011-12赛季最佳新秀第一阵容
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1482619330,4286545137&fm=179&app=42&f=PNG?w=275&h=200&s=9102F81546323788500414980300C0A9" alt="wu">
+                    <div class="card-text">
+                        <a href="https://haokan.baidu.com/v?pd=wisenatural&vid=5728660958646028835  "><h1>东契奇</h1></a>
+                        <p>
+                            <strong class="blue-title">Luka Dončić</strong>
+                            <br><br>
+                            1999年2月28日出生于斯洛文尼亚卢布尔雅那，斯洛文尼亚职业篮球运动员，司职控球后卫/得分后卫
+                            <br>
+                            ESPY最佳NBA球员
+                            NBA西部决赛MVP
+                            NBA最佳阵容第一阵容
+                            FIBA2023男篮世界杯最佳阵容
+                            NBA历史欧洲最佳第一阵容
+                            NBA全明星西部首发阵容
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3499394244,3072199395&fm=179&app=42&f=PNG?w=275&h=200&s=1922C8104E321E80522A3481030070E9" alt="wu">
+                        <div class="card-text">
+                            <a href="https://weibo.com/tv/show/1034:5100219180711940"><h1>汤普森</h1></a>
+                            <p>
+                                <strong class="blue-title">Klay Thompson</strong>
+                                <br><br>
+                                1990年2月8日出生于美国加利福尼亚州洛杉矶（Los Angeles, California），美国职业篮球运动员，司职得分后卫
+                                <br>
+                                新秀赛季入选最佳新秀阵容第一阵容,
+                                四次随勇士队夺得NBA总冠军,
+                                两次入选NBA最佳阵容第三阵容,
+                                2018-19赛季入选NBA最佳防守阵容第二阵容,
+                                五次入选NBA全明星阵容
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1246130174,2043330024&fm=179&app=42&f=PNG?w=275&h=200&s=5321B8400772378852045099030070E9" alt="wu">
+                            <div class="card-text">
+                                <a href="https://www.bilibili.com/video/BV1NU411Z7u6/"><h1>华盛顿</h1></a>
+                                <p>
+                                    <strong class="blue-title">P.J.Washington</strong>
+                                    <br><br>
+                                    1998年8月23日出生于美国肯塔基州路易斯维尔，美国职业篮球运动员，司职大前锋
+                                    <br>
+                                    2019-20赛季最佳新秀阵容第二阵容
+                                </p>
+                            </div>
+                            <div class="card">
+                                <img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1160197118,756817826&fm=179&app=42&f=PNG?w=275&h=200&s=1A61E902CD62168C256420980300A062" alt="wu">
+                                <div class="card-text">
+                                    <a href="https://haokan.baidu.com/v?pd=wisenatural&vid=7884722631670062661"><h1>莱弗利</h1></a>
+                                    <p>
+                                        <strong class="blue-title">Dereck Lively</strong>
+                                        <br><br>
+                                        2004年2月12日出生于美国宾夕法尼亚州费城，美国职业篮球运动员，司职中锋
+                                        <br>
+                                        莱夫利在杜克大学证明了他有能力凭借他的长臂展成为挑球目标和防守点，他可能会适应传统的挡拆大个子的角色。他的机动性足以在外线防守大部分人，这可以作为转换计划的一部分，或者当情况发生变化时，他也能够防守持球者
+                                        
+                                    </p>
+                                </div>
+      
+                </div>
+            </div>
+            <div id="aibi">History</div>
+            <div id="history">
+                <p>独行侠队在1980-1981赛季才加入NBA，但很快就成为一支有竞争力的球队。在80年代，独行侠队一直被看成是一支很有前途的球队。但在90年代初，独行侠队开始下坡路，两度逼近球队最差战绩。从90年代中期开始，独行侠队重新开始恢复元气。
+                    1980-1981是独行侠队的第一个赛季。小牛队以15胜67负的糟糕战绩结束，但此后他们成绩连年上扬，到1983-1984赛季时，独行侠队取得了43胜39负的成绩，第一次杀入季后赛。
+                    1988-1989赛季，伤病袭击了独行侠队，使他们6年来第一次被摒于季后赛门外。1990年他们再进季后赛，但此后连续多年都处于球队重建的过程中，连续10年远离季后赛。
+                    小牛队苦难终于到了尽头。2000-2001赛季，在11个赛季未能进入季后赛后，小牛队终于洗尽铅华，再次踏入季后赛门坎。芬利和诺维茨基成为当家球星，率队取得53胜29负的成绩。在季后赛首轮遇到爵士队，虽然以二连败开局，但此后小牛队此后连下三城，闯入第二轮。在马刺队面前，稚嫩的小牛队以1比4落败。
+                    从01-02赛季开始，小牛真正成为西部的一支劲旅。老板库班不惜血本招募球星，以诺维斯基为核心，先后有芬利、纳什、特里等明星球员为小牛队效力，并于05-06赛季以惊心动魄的4-3力克夙敌马刺，一举杀入总决赛，在几乎所有人看好并2-0领先的情况下，最终以2-4惨遭热火逆转，取得亚军。 2010-2011赛季，达拉斯小牛队在客场以4-2战胜拥有者詹姆斯、韦德、波什的迈阿密热火，五年后完成复仇，获得队史第一个NBA总冠军，同时诺维茨基获得总决赛MVP。</p>
+
+            </div>
+
+            <div id="vovo">video </div>
+            <div>
+            <a href="https://weibo.com/tv/show/1034:5019055636021255"><h1 style="color: #760707;" >独行侠vs勇士</h1></a>
+            <a href="https://v.qq.com/x/cover/mzc00200825f9q5/g3572cz4n34.html"><h1 style="color: #5763de;" >独行侠vs开拓者</h1></a>
+            <a href="https://weibo.com/tv/show/1034:5031744412254217"><h1 style="color: #97de40;" >独行侠vs雷霆</h1></a>
+            <h1 style="margin: 0%;">想看更多orz自己去找吧</h1>
+
+
+            </div>
+            
+            </div>
+    
+</body>
+
+</html>
