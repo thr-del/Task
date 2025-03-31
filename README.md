@@ -1,5 +1,5 @@
 # 这是我的学习笔记
-0.[为什么用谷歌]
+### 0.[为什么用谷歌]（http://github.com/thr-del/Task/blob/master/Github学习笔记.md）
 ***
 ## 第一阶段笔记
 ### 1.[github 学习笔记](http://github.com/thr-del/Task/blob/master/Github学习笔记.md)
