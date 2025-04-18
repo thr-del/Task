@@ -22,4 +22,4 @@
 ### 1.[复刻网页HTML](http://github.com/thr-del/Task/blob/master/docs/html+css+js/geek.html)
 ### 2.[复刻网页CSS](http://github.com/thr-del/Task/blob/master/docs/html+css+js/geek.css)
 ### 3 .[复刻网页JS](http://github.com/thr-del/Task/blob/master/docs/html+css+js/geek.js)
-### 4.[点这里看网页](https://thr-del.github.io/Task/html+css+js)
+### 4.[点这里看网页](https://thr-del.github.io/Task/docs/html+css+js/geek.html)
