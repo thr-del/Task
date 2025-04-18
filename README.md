@@ -16,7 +16,7 @@
 ### 2.[CSS学习笔记](http://github.com/thr-del/Task/blob/master/CSS学习笔记.md)
 ### 3.[js学习笔记](http://github.com/thr-del/Task/blob/master/js学习笔记.md)
 ### 4.[demo源代码](http://github.com/thr-del/Task/blob/master/网页原代码.md)
-### 5.[点这里看网页](https://thr-del.github.io/Task/)
+### 5.[点这里看网页](https://thr-del.github.io/Task/docs/index.html)
 ***
 ## 第四阶段笔记
 ### 1.[复刻网页HTML](http://github.com/thr-del/Task/blob/master/docs/html+css+js/geek.html)
