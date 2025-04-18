@@ -1,0 +1,863 @@
+.zero{
+   display: flex; /* 使用弹性盒布局 */
+   width: 100%; /* 宽度占满父容器 */
+   height: 60px; /* 高度为60像素 */
+   justify-content: center; /* 子元素在主轴上居中对齐 */
+}
+
+.nav {
+   position: fixed; /* 固定定位，相对于浏览器窗口定位 */
+   display: flex; /* 使用弹性盒布局 */ 
+   background: orange; /* 背景颜色为橙色 */
+   height: 60px; /* 高度为60像素 */
+   width:95%; /* 宽度占父容器的95% */
+   justify-content: space-between; /* 子元素在主轴上均匀分布，两端对齐 */
+   align-items: center; /* 子元素在交叉轴上垂直居中 */
+   list-style-type: none; /* 去除列表项默认样式（如圆点） */
+   border-radius: 30px; /* 圆角半径为30像素 */
+   padding: 0px; /* 内边距为0像素 */
+   margin:10px; /* 外边距为10像素 */
+   z-index: 10; /* 堆叠顺序，数值越大越在上面 */
+   opacity: 0.7; /* 透明度为0.7 */
+}
+.nav li {
+   flex: 1; /* 使li元素在弹性盒中可伸缩，均匀占据空间 */
+   text-align: center; /* 让li内文本水平居中 */
+   color:white; /* 文本颜色为白色 */
+   font-size: 20px; /* 文本字体大小为20像素 */
+}
+.nav li a {
+   display: block; /* 使a元素独占一行 */
+   text-decoration: none; /* 去除下划线 */
+   color: inherit; /* 继承父元素颜色 */
+   height: 100%; /* 撑满li高度 */
+   line-height: 60px; /* 使文本垂直居中，行高与.nav的height一致 */
+   border-radius: 30px; /* 圆角半径为30像素 */
+   transition: background-color 0.3s ease; /* 鼠标悬停时背景色变化的过渡效果，0.3秒，ease模式 */
+}
+.nav li a:hover {
+   background-color: rgba(220, 150, 100, 1); /* 鼠标悬停时背景色变为指定RGBA颜色 */
+}
+
+.introduction {
+   position:relative; /* 相对定位，相对于自身正常位置定位 */
+   display:inline-block; /* 以行内块元素显示，可设宽高且不独占一行 */
+}
+.picture{
+   display: none; /* 初始不显示 */
+   position: absolute; /* 绝对定位，相对于最近已定位祖先元素定位 */
+   border:3px solid orange; /* 边框为3像素宽橙色实线 */
+   min-width: 160px; /* 最小宽度160像素 */
+   opacity:0.5; /* 透明度0.5 */
+   z-index: 1; /* 堆叠顺序为1 */
+   top: 100%; /* 位于定位祖先元素顶部下方100%位置 */
+}
+.introduction:hover .picture {
+   display:block; /* 鼠标悬停在.introduction上时，显示.picture元素 */
+}
+.first{
+   display: flex; /* 使用弹性盒布局 */
+   width: 100%; /* 宽度占满父容器 */
+   height: 900px; /* 高度900像素 */
+   background-image: url(background_Homepage.png); /* 设置背景图片 */
+   background-size: cover; /* 背景图片按比例缩放覆盖背景区域 */
+   justify-content: center; /* 子元素在主轴上居中对齐 */
+   align-items: flex-start; /* 子元素在交叉轴上起点对齐 */
+}
+.logo{
+   margin-top: 130px; /* 距离顶部外边距130像素 */
+   transition: transform 0.3s ease; /* 元素变换时的过渡效果，0.3秒，ease模式 */
+}
+.logo:hover{
+   transform: scale(1.2); /* 鼠标悬停时，元素放大到1.2倍 */
+   /* transform: rotate(360deg);*/ /* 鼠标悬停时旋转360度，当前被注释 */
+}
+.second{
+   display: flex; /* 使用弹性盒布局 */
+   flex-direction: column; /* 子元素垂直排列 */
+   width: 100%; /* 宽度占满父容器 */
+   height: 2450px; /* 高度2450像素 */
+   justify-content: flex-start; /* 子元素在主轴上起点对齐 */
+}
+.second>.intro{
+   display: flex; /* 使用弹性盒布局 */
+   width: 100%; /* 宽度占满父容器 */
+   height: 200px; /* 高度200像素 */
+   background-image:url(decoration_Transition.png); /* 设置背景图片 */
+   background-size: cover; /* 背景图片按比例缩放覆盖背景区域 */
+   background-repeat: no-repeat; /* 背景图片不重复 */
+   justify-content: center; /* 子元素在主轴上居中对齐 */
+}
+.second>.intro>p{
+   color: rgb(42, 63, 165); /* 文本颜色为指定RGB颜色 */
+   font-size: 50px; /* 文本字体大小50像素 */
+   font-weight: bold; /* 文本字体加粗 */
+   margin-top: 100px; /* 距离顶部外边距100像素 */
+}
+.second>.cheng{
+   display: flex; /* 使用弹性盒布局，使子元素可在一行或一列排列并控制其分布 */
+   padding: 40px; /* 给元素内部添加内边距，四周内边距均为40像素 */
+   margin-top: 60px; /* 元素上外边距为60像素，与上方元素间隔60像素 */
+   margin-left: 12%; /* 元素左外边距为父元素宽度的12% */
+   margin-right: 18%; /* 元素右外边距为父元素宽度的18% */
+   width: 70%; /* 元素宽度为父元素宽度的70% */
+   height: 400px; /* 元素高度为400像素 */
+   border: 4px solid rgb(94, 100, 94); /* 元素边框为4像素宽的指定RGB颜色的实线 */
+   border-radius: 30px; /* 元素边框设置30像素的圆角半径 */
+   justify-content: space-between; /* 子元素在主轴上均匀分布，两端对齐 */
+   align-items: flex-start; /* 子元素在交叉轴上起点对齐 */
+   transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.cheng>.section1{
+   flex: 2; /* 在弹性盒布局中，该子元素占据2份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+   flex-direction: column; /* 子元素垂直方向排列 */
+}
+.cheng>.kai{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+   flex-direction: column; /* 子元素垂直方向排列 */
+}
+.kai>h1{
+   color: #000; /* 文本颜色为黑色 */
+   font-size: 40px; /* 文本字体大小为40像素 */
+   text-align: left; /* 文本水平方向左对齐 */
+}
+.kai>.english1{
+   color: rgb(64, 88, 207); /* 文本颜色为指定的RGB值 */
+   font-size: 30px; /* 文本字体大小为30像素 */
+   text-align: left; /* 文本水平方向左对齐 */
+   font-weight: 500; /* 文本字体粗细为500 */
+}
+.text>.frontend{
+   font-size: 22px; /* 文本字体大小为22像素 */
+}
+.text>.backend{
+   font-size: 22px; /* 文本字体大小为22像素 */
+}
+.cheng>.section1>.text{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+}
+.cheng>.image1{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+}
+.cheng>.image1 img{
+   margin-left: 22px; /* 图片左外边距为22像素，与左侧元素间隔22像素 */
+   max-width: 90%; /* 图片最大宽度为父元素宽度的90% */
+   height:auto; /* 图片高度根据宽度等比例自适应 */
+   transition: transform 0.3s ease; /* 当图片发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.cheng:hover{
+   transform: scale(1.1); /* 鼠标悬停在该元素上时，元素放大到原来的1.1倍 */
+}
+.image1 img:hover{
+   transform: rotate(15deg); /* 鼠标悬停在图片上时，图片旋转15度 */
+}
+.second>.chan{
+   display: flex; /* 使用弹性盒布局，使子元素可在一行或一列排列并控制其分布 */
+   padding: 40px; /* 给元素内部添加内边距，四周内边距均为40像素 */
+   margin-top: 60px; /* 元素上外边距为60像素，与上方元素间隔60像素 */
+   margin-left: 12%; /* 元素左外边距为父元素宽度的12% */
+   margin-right: 18%; /* 元素右外边距为父元素宽度的18% */
+   width: 70%; /* 元素宽度为父元素宽度的70% */
+   height: 400px; /* 元素高度为400像素 */
+   border: 4px solid rgb(94, 100, 94); /* 元素边框为4像素宽的指定RGB颜色的实线 */
+   border-radius: 30px; /* 元素边框设置30像素的圆角半径 */
+   justify-content: space-between; /* 子元素在主轴上均匀分布，两端对齐 */
+   align-items: flex-start; /* 子元素在交叉轴上起点对齐 */
+   transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.chan>.image2{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+}
+.chan>.image2 img{
+   margin-right: 22px; /* 图片右外边距为22像素，与右侧元素间隔22像素 */
+   max-width: 90%; /* 图片最大宽度为父元素宽度的90% */
+   height:auto; /* 图片高度根据宽度等比例自适应 */
+   transition: transform 0.3s ease; /* 当图片发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.chan>.section2{
+   flex: 2; /* 在弹性盒布局中，该子元素占据2份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+   flex-direction: column; /* 子元素垂直方向排列 */
+}
+.chan>.kai2{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+   display: flex; /* 使用弹性盒布局 */
+   flex-direction: column; /* 子元素垂直方向排列 */
+}
+.kai2>h1{
+   color: #000; /* 文本颜色为黑色 */
+   font-size: 40px; /* 文本字体大小为40像素 */
+   text-align: left; /* 文本水平方向左对齐 */
+}
+.kai2>.english2{
+   color: rgb(228, 111, 235); /* 文本颜色为指定的RGB值 */
+   font-size: 30px; /* 文本字体大小为30像素 */
+   text-align: left; /* 文本水平方向左对齐 */
+   font-weight: 500; /* 文本字体粗细为500 */
+}
+.text2>.PM{
+   font-size: 22px; /* 文本字体大小为22像素 */
+}
+.chan>.section2>.text2{
+   flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+}
+.chan:hover{
+   transform: scale(1.1); /* 鼠标悬停在该元素上时，元素放大到原来的1.1倍 */
+}
+.image2 img:hover{
+   transform: rotate(15deg); /* 鼠标悬停在图片上时，图片旋转15度 */
+}
+
+.second>.you{
+    display: flex; /* 使用弹性盒布局，使子元素可在一行或一列排列并控制其分布 */
+    padding: 40px; /* 给元素内部添加内边距，四周内边距均为40像素 */
+    margin-top: 60px; /* 元素上外边距为60像素，与上方元素间隔60像素 */
+    margin-left: 12%; /* 元素左外边距为父元素宽度的12% */
+    margin-right: 18%; /* 元素右外边距为父元素宽度的18% */
+    width: 70%; /* 元素宽度为父元素宽度的70% */
+    height: 400px; /* 元素高度为400像素 */
+    border: 4px solid rgb(94, 100, 94); /* 元素边框为4像素宽的指定RGB颜色的实线 */
+    border-radius: 30px; /* 元素边框设置30像素的圆角半径 */
+    justify-content: space-between; /* 子元素在主轴上均匀分布，两端对齐 */
+    align-items: flex-start; /* 子元素在交叉轴上起点对齐 */
+    transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.you>.section3{
+    flex: 2; /* 在弹性盒布局中，该子元素占据2份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    flex-direction: column; /* 子元素垂直方向排列 */
+}
+.you>.kai3{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    flex-direction: column; /* 子元素垂直方向排列 */
+}
+.kai3>h1{
+    color: #000; /* 文本颜色为黑色 */
+    font-size: 40px; /* 文本字体大小为40像素 */
+    text-align: left; /* 文本水平方向左对齐 */
+}
+.kai3>.english3{
+    color: rgb(39, 199, 167); /* 文本颜色为指定的RGB值 */
+    font-size: 30px; /* 文本字体大小为30像素 */
+    text-align: left; /* 文本水平方向左对齐 */
+    font-weight: 500; /* 文本字体粗细为500 */
+}
+.text3>.tech{
+    font-size: 22px; /* 文本字体大小为22像素 */
+}
+.you>.section3>.text3{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+}
+.you>.image3{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+}
+.you>.image3 img{
+    margin-left: 22px; /* 图片左外边距为22像素，与左侧元素间隔22像素 */
+    max-width: 90%; /* 图片最大宽度为父元素宽度的90% */
+    height:auto; /* 图片高度根据宽度等比例自适应 */
+    transition: transform 0.3s ease; /* 当图片发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.you:hover{
+    transform: scale(1.1); /* 鼠标悬停在该元素上时，元素放大到原来的1.1倍 */
+}
+.image3 img:hover{
+    transform: rotate(15deg); /* 鼠标悬停在图片上时，图片旋转15度 */
+}
+
+.second>.anqu{
+    display: flex; /* 使用弹性盒布局，使子元素可在一行或一列排列并控制其分布 */
+    padding: 40px; /* 给元素内部添加内边距，四周内边距均为40像素 */
+    margin-top: 60px; /* 元素上外边距为60像素，与上方元素间隔60像素 */
+    margin-left: 12%; /* 元素左外边距为父元素宽度的12% */
+    margin-right: 18%; /* 元素右外边距为父元素宽度的18% */
+    width: 70%; /* 元素宽度为父元素宽度的70% */
+    height: 400px; /* 元素高度为400像素 */
+    border: 4px solid rgb(94, 100, 94); /* 元素边框为4像素宽的指定RGB颜色的实线 */
+    border-radius: 30px; /* 元素边框设置30像素的圆角半径 */
+    justify-content: space-between; /* 子元素在主轴上均匀分布，两端对齐 */
+    align-items: flex-start; /* 子元素在交叉轴上起点对齐 */
+    transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.anqu>.image4{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+}
+.anqu>.image4 img{
+    margin-right: 22px; /* 图片右外边距为22像素，与右侧元素间隔22像素 */
+    max-width: 90%; /* 图片最大宽度为父元素宽度的90% */
+    height:auto; /* 图片高度根据宽度等比例自适应 */
+    transition: transform 0.3s ease; /* 当图片发生变换（如缩放、旋转等）时，在0.3秒内以ease模式平滑过渡 */
+}
+.anqu>.section4{
+    flex: 2; /* 在弹性盒布局中，该子元素占据2份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    flex-direction: column; /* 子元素垂直方向排列 */
+}
+.anqu>.kai4{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    flex-direction: column; /* 子元素垂直方向排列 */
+}
+.kai4>h1{
+    color: #000; /* 文本颜色为黑色 */
+    font-size: 40px; /* 文本字体大小为40像素 */
+    text-align: left; /* 文本水平方向左对齐 */
+}
+.kai4>.english4{
+    color: rgb(200, 125, 172); /* 文本颜色为指定的RGB值 */
+    font-size: 30px; /* 文本字体大小为30像素 */
+    text-align: left; /* 文本水平方向左对齐 */
+    font-weight: 500; /* 文本字体粗细为500 */
+}
+.text4>.web{
+    font-size: 22px; /* 文本字体大小为22像素 */
+}
+.anqu>.section4>.text4{
+    flex: 1; /* 在弹性盒布局中，该子元素占据1份空间（相对其他子元素） */
+}
+.anqu:hover{
+    transform: scale(1.1); /* 鼠标悬停在该元素上时，元素放大到原来的1.1倍 */
+}
+.image4 img:hover{
+    transform: rotate(15deg); /* 鼠标悬停在图片上时，图片旋转15度 */
+}
+
+.third{
+    position: relative; /* 元素采用相对定位，相对于自身正常位置进行定位，可作为绝对定位子元素的参考 */
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    height: 780px; /* 元素的高度为780像素 */
+    width: 90%; /* 元素的宽度为父元素宽度的90% */
+    margin-left: 5%; /* 元素左侧的外边距为父元素宽度的5% */
+    margin-right: 5%; /* 元素右侧的外边距为父元素宽度的5% */
+    background-image: url(decoration_Decoration2.png), url(decoration_Decoration.png), url(decoration_Decoration1.png), url(decoration_Decoration.png); /* 设置元素的背景图片为多个指定路径的图片（需确保路径正确） */
+    background-position: left top,right top,left bottom,right bottom; /* 分别设置多个背景图片的位置，左上角、右上角、左下角、右下角 */
+    background-repeat: no-repeat; /* 背景图片不重复显示 */
+    background-size: 200px 100px; /* 背景图片的大小设置为宽度200像素，高度100像素 */
+}
+.third>.abs{
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    width: 90%; /* 元素的宽度为父元素宽度的90% */
+    height: 700px; /* 元素的高度为700像素 */
+    margin-top: 30px; /* 元素上方的外边距为30像素，与上方元素间隔30像素 */
+    margin-left: 5%; /* 元素左侧的外边距为父元素宽度的5% */
+    margin-right: 5%; /* 元素右侧的外边距为父元素宽度的5% */
+    border:10px solid #817c7c55; /* 元素的边框为10像素宽，颜色为指定的半透明颜色（十六进制表示）的实线 */
+    background-color: rgba(237, 239, 144, 0.2); /* 元素的背景颜色设置为指定的半透明RGB值颜色 */
+    border-radius: 30px; /* 为元素的四个角设置30像素的圆角半径，使边角变圆滑 */
+    flex-direction: column; /* 子元素以垂直方向排列 */
+    justify-content: start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+}
+.abs>.abs1{
+    flex: 1; /* 在弹性盒布局中，该子元素占据的空间比例为1份（相对于其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    justify-content: center; /* 子元素在主轴（水平方向，默认）上居中对齐 */
+}
+.abs1>p{
+    text-align: center; /* 文本在水平方向上居中对齐 */
+    font-size: 45px; /* 文本的字体大小为45像素 */
+}
+.abs>.abs2{
+    flex: 5; /* 在弹性盒布局中，该子元素占据的空间比例为5份（相对于其他子元素） */
+    display: flex; /* 使用弹性盒布局 */
+    justify-content:space-around; /* 子元素在主轴（默认水平方向）上均匀分布，元素之间及两端有相等的间隔 */
+}
+.abs2>.speech{
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    width: 15%; /* 元素的宽度为父元素宽度的15% */
+    height: 400px; /* 元素的高度为400像素 */
+    margin-top: 20px; /* 元素上方的外边距为20像素，与上方元素间隔20像素 */
+    border: 8px solid purple; /* 元素的边框为8像素宽，颜色为紫色的实线 */
+    border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+    flex-direction: column; /* 子元素以垂直方向排列 */
+    justify-content: flex-start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+    transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式（平缓的过渡效果）完成过渡 */
+}
+.speech img{
+   flex: 1; /* 在弹性盒布局中，该图片元素占据1份空间（相对其他子元素） */
+   max-width: 60%; /* 图片的最大宽度为父元素宽度的60% */
+   max-height: 130px; /* 图片的最大高度为130像素 */
+   margin-left: 20%; /* 图片左侧外边距为父元素宽度的20% */
+   margin-right: 20%; /* 图片右侧外边距为父元素宽度的20% */
+   margin-top: 20px; /* 图片上方外边距为20像素 */
+}
+.speech>p{
+   flex: 1; /* 在弹性盒布局中，该段落元素占据1份空间（相对其他子元素） */
+   font-size: 18px; /* 文本字体大小为18像素 */
+   text-align: center; /* 文本在水平方向上居中对齐 */
+   margin: 15px; /* 段落元素四周外边距均为15像素 */
+}
+
+.abs2>.diversity{
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 15%; /* 元素宽度为父元素宽度的15% */
+   height: 400px; /* 元素高度为400像素 */
+   margin-top: 20px; /* 元素上方外边距为20像素，与上方元素间隔20像素 */
+   border: 8px solid purple; /* 元素边框为8像素宽，颜色为紫色的实线 */
+   border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+   flex-direction: column; /* 子元素以垂直方向排列 */
+   justify-content: flex-start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+   transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式（平缓的过渡效果）完成过渡 */
+}
+.diversity img{
+   flex: 1; /* 在弹性盒布局中，该图片元素占据1份空间（相对其他子元素） */
+   max-width: 60%; /* 图片的最大宽度为父元素宽度的60% */
+   max-height: 130px; /* 图片的最大高度为130像素 */
+   margin-left: 20%; /* 图片左侧外边距为父元素宽度的20% */
+   margin-right: 20%; /* 图片右侧外边距为父元素宽度的20% */
+   margin-top: 20px; /* 图片上方外边距为20像素 */
+}
+.diversity>p{
+   flex: 1; /* 在弹性盒布局中，该段落元素占据1份空间（相对其他子元素） */
+   font-size: 18px; /* 文本字体大小为18像素 */
+   text-align: center; /* 文本在水平方向上居中对齐 */
+   margin: 15px; /* 段落元素四周外边距均为15像素 */
+}
+.abs2>.time{
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 15%; /* 元素宽度为父元素宽度的15% */
+   height: 400px; /* 元素高度为400像素 */
+   margin-top: 20px; /* 元素上方外边距为20像素，与上方元素间隔20像素 */
+   border: 8px solid purple; /* 元素边框为8像素宽，颜色为紫色的实线 */
+   border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+   flex-direction: column; /* 子元素以垂直方向排列 */
+   justify-content: flex-start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+   transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式（平缓的过渡效果）完成过渡 */
+}
+.time img{
+   flex: 1; /* 在弹性盒布局中，该图片元素占据1份空间（相对其他子元素） */
+   max-width: 60%; /* 图片的最大宽度为父元素宽度的60% */
+   max-height: 130px; /* 图片的最大高度为130像素 */
+   margin-left: 20%; /* 图片左侧外边距为父元素宽度的20% */
+   margin-right: 20%; /* 图片右侧外边距为父元素宽度的20% */
+   margin-top: 20px; /* 图片上方外边距为20像素 */
+}
+.time>p{
+   flex: 1; /* 在弹性盒布局中，该段落元素占据1份空间（相对其他子元素） */
+   font-size: 18px; /* 文本字体大小为18像素 */
+   text-align: center; /* 文本在水平方向上居中对齐 */
+   margin: 15px; /* 段落元素四周外边距均为15像素 */
+}
+
+.speech:hover{
+   transform:scale(1.1); /* 当鼠标悬停在.speech元素上时，元素在水平和垂直方向上同时放大到原来的1.1倍 */
+}
+.diversity:hover{
+   transform:scale(1.1); /* 当鼠标悬停在.diversity元素上时，元素在水平和垂直方向上同时放大到原来的1.1倍 */
+}
+.time:hover{
+   transform:scale(1.1); /* 当鼠标悬停在.time元素上时，元素在水平和垂直方向上同时放大到原来的1.1倍 */
+}
+.third>.butterfly{
+   position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素进行定位 */
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 200px; /* 元素宽度为200像素 */
+   height: 200px; /* 元素高度为200像素 */
+   top: 540px; /* 元素距离定位参考元素（这里是.third）顶部540像素 */
+   right: 150px; /* 元素距离定位参考元素（这里是.third）右侧150像素 */
+   z-index: 3; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较上层 */
+   transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式（平缓的过渡效果）完成过渡 */
+}
+.butterfly:hover{
+   transform: translateY(15px); /* 当鼠标悬停在.butterfly元素上时，元素在垂直方向上向下移动15像素 */
+}
+
+.tip2{
+   top: 580px; /* 元素距离定位参考元素顶部580像素 */
+   right: 170px; /* 元素距离定位参考元素右侧170像素 */
+   display: none; /* 元素初始状态下不显示 */
+   background-color: white; /* 元素背景颜色为白色 */
+   border: 1px solid grey; /* 元素边框为1像素宽，颜色为灰色的实线 */
+   padding: 5px; /* 元素内部内边距为5像素 */
+   position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素进行定位 */
+   z-index: 7; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较上层 */
+}
+.butterfly:hover+.tip2{
+   display: block; /* 当鼠标悬停在.butterfly元素上时，显示.tip2元素 */
+}
+
+.cus{
+   position: relative; /* 元素采用相对定位，相对于自身正常位置进行定位，可作为绝对定位子元素的参考 */
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 100%; /* 元素宽度占满父元素的宽度 */
+   height: 900px; /* 元素高度为900像素 */
+   justify-content: center; /* 子元素在主轴（水平方向）上居中对齐 */
+}
+
+.cus>.cus-box{
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 84%; /* 元素宽度为父元素宽度的84% */
+   height: 700px; /* 元素高度为700像素 */
+   margin-top: 80px; /* 元素上方外边距为80像素，与上方元素间隔80像素 */
+   border: 5px solid seagreen; /* 元素边框为5像素宽，颜色为海绿色的实线 */
+   border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+   justify-content: center; /* 子元素在主轴（水平方向）上居中对齐 */
+}
+.cus-box>.cus-text{
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 60%; /* 元素宽度为父元素宽度的60% */
+   height:700px; /* 元素高度为700像素 */
+   flex-direction: column; /* 子元素以垂直方向排列 */
+   justify-content: flex-start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+}
+.cus-text img{
+   width: 50px; /* 图片宽度为50像素 */
+   height: 100px; /* 图片高度为100像素 */
+   position: relative; /* 元素采用相对定位，相对于自身正常位置进行定位 */
+   top: 30px; /* 图片相对于自身正常位置向下偏移30像素 */
+   margin-right: 10px; /* 图片右侧外边距为10像素 */
+}
+
+.cus-text>h1{
+   text-align: center; /* 文本在水平方向上居中对齐 */
+   font-size: 50px; /* 文本字体大小为50像素 */
+}
+.cus-text>ul{
+   font-size: 30px; /* 无序列表文本字体大小为30像素 */
+}
+.cus-text>p{
+   font-size: 20px; /* 段落文本字体大小为20像素 */
+   color: #4f484855; /* 文本颜色为指定的半透明十六进制颜色 */
+}
+.cus-text>.anni{
+   display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+   width: 100%; /* 元素宽度占满父元素的宽度 */
+   height: 50px; /* 元素高度为50像素 */
+   margin-top: 70px; /* 元素上方外边距为70px，与上方元素间隔70像素 */
+   justify-content: space-around; /* 子元素在主轴（水平方向）上均匀分布，元素之间及两端有相等的间隔 */
+   align-items: center; /* 子元素在交叉轴（垂直方向）上垂直居中对齐 */
+}
+.button1 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #4CAF50; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+}
+
+.button1:hover {
+   background-color: #4CAF50; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button1:active {
+   background-color: #3e8e41; /* 按钮被按下时，背景颜色变为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+.button2 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #008CBA; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+   z-index: 3; /* 设置按钮的堆叠顺序，数值越大越在上面，这里表示该按钮在堆叠顺序中处于较上层 */
+}
+
+.button2:hover {
+   background-color: #008CBA; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button2:active {
+   background-color: #008CBA; /* 按钮被按下时，背景颜色保持为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+
+.button3 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #f44336; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+   z-index: 3; /* 设置按钮的堆叠顺序，数值越大越在上面，这里表示该按钮在堆叠顺序中处于较上层 */
+}
+
+.button3:hover {
+   background-color: #f44336; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button3:active {
+   background-color: #f44336; /* 按钮被按下时，背景颜色保持为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+.tan{
+   position: fixed; /* 元素采用固定定位，相对于浏览器窗口定位，不随页面滚动而移动 */
+   top: 9%; /* 元素距离浏览器窗口顶部9%的距离 */
+   left: 50%; /* 元素距离浏览器窗口左侧50%的距离 */
+   width:300px; /* 元素宽度为300像素 */
+   padding:20px; /* 元素内部内边距为20像素，上下左右均是 */
+   text-align:center; /* 元素内文本水平方向居中对齐 */
+   background-color:rgb(232, 241, 161); /* 元素背景颜色为指定RGB值 */
+   border-radius:10px; /* 元素边框圆角半径为10像素 */
+   z-index:10; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较上层 */
+   display: none; /* 元素初始状态下不显示 */
+   transform: translate(-50%,-50%); /* 元素在水平和垂直方向上分别偏移自身宽度和高度的-50%，即水平和垂直方向上居中 */
+}
+.tan-content>p{
+   font-size: 15px; /* 段落文本字体大小为15像素 */
+   color: #000; /* 段落文本颜色为黑色 */
+   margin-bottom: 20px; /* 段落元素下方外边距为20像素 */
+}
+.tan-content>.queding{
+   padding:8px 16px; /* 元素内部内边距，上下为8像素，左右为16像素 */
+   border:none; /* 元素无边框 */
+   background-color:#a4a5a5; /* 元素背景颜色为指定十六进制值 */
+   border-radius:5px; /* 元素边框圆角半径为5像素 */
+   color:white; /* 元素文本颜色为白色 */
+   cursor: pointer; /* 鼠标悬停在元素上时，指针样式变为指针（手形），表示可点击 */
+}
+.button1 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #4CAF50; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+}
+
+.button1:hover {
+   background-color: #4CAF50; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button1:active {
+   background-color: #3e8e41; /* 按钮被按下时，背景颜色变为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+.button2 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #008CBA; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+   z-index: 3; /* 设置按钮的堆叠顺序，数值越大越在上面，这里表示该按钮在堆叠顺序中处于较上层 */
+}
+
+.button2:hover {
+   background-color: #008CBA; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button2:active {
+   background-color: #008CBA; /* 按钮被按下时，背景颜色保持为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+
+.button3 {
+   width: 20%; /* 按钮宽度为父元素宽度的20% */
+   height: 90%; /* 按钮高度为父元素高度的90% */
+   background-color: white; /* 按钮背景颜色为白色 */
+   color: black; /* 按钮文本颜色为黑色 */
+   border: 2px solid #f44336; /* 按钮边框为2像素宽，颜色为指定十六进制值的实线 */
+   border-radius: 20px; /* 按钮边框圆角半径为20像素 */
+   font-size: 20px; /* 按钮文本字体大小为20像素 */
+   z-index: 3; /* 设置按钮的堆叠顺序，数值越大越在上面，这里表示该按钮在堆叠顺序中处于较上层 */
+}
+
+.button3:hover {
+   background-color: #f44336; /* 鼠标悬停时，按钮背景颜色变为指定十六进制值 */
+   color: white; /* 鼠标悬停时，按钮文本颜色变为白色 */
+}
+.button3:active {
+   background-color: #f44336; /* 按钮被按下时，背景颜色保持为指定十六进制值 */
+   box-shadow: 0 5px #666; /* 按钮被按下时，添加阴影效果，水平偏移0，垂直偏移5像素，阴影颜色为指定十六进制值 */
+   transform: translateY(4px); /* 按钮被按下时，在垂直方向上向下移动4像素 */
+}
+
+.tan{
+   position: fixed; /* 元素采用固定定位，相对于浏览器窗口定位，不随页面滚动而移动 */
+   top: 9%; /* 元素距离浏览器窗口顶部9%的距离 */
+   left: 50%; /* 元素距离浏览器窗口左侧50%的距离 */
+   width:300px; /* 元素宽度为300像素 */
+   padding:20px; /* 元素内部内边距为20像素，上下左右均是 */
+   text-align:center; /* 元素内文本水平方向居中对齐 */
+   background-color:rgb(232, 241, 161); /* 元素背景颜色为指定RGB值 */
+   border-radius:10px; /* 元素边框圆角半径为10像素 */
+   z-index:10; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较上层 */
+   display: none; /* 元素初始状态下不显示 */
+   transform: translate(-50%,-50%); /* 元素在水平和垂直方向上分别偏移自身宽度和高度的-50%，即水平和垂直方向上居中 */
+}
+.tan-content>p{
+   font-size: 15px; /* 段落文本字体大小为15像素 */
+   color: #000; /* 段落文本颜色为黑色 */
+   margin-bottom: 20px; /* 段落元素下方外边距为20像素 */
+}
+.tan-content>.queding{
+   padding:8px 16px; /* 元素内部内边距，上下为8像素，左右为16像素 */
+   border:none; /* 元素无边框 */
+   background-color:#a4a5a5; /* 元素背景颜色为指定十六进制值 */
+   border-radius:5px; /* 元素边框圆角半径为5像素 */
+   color:white; /* 元素文本颜色为白色 */
+   cursor: pointer; /* 鼠标悬停在元素上时，指针样式变为指针（手形），表示可点击 */
+}
+
+.cus>.leaf{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.cus）进行定位 */
+    width: 100px; /* 元素宽度为100像素 */
+    height: 100px; /* 元素高度为100像素 */
+    top: 110px; /* 元素距离定位参考元素（.cus）顶部110像素 */
+    left: 420px; /* 元素距离定位参考元素（.cus）左侧420像素 */
+}
+.cus>.tree{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.cus）进行定位 */
+    width: 200px; /* 元素宽度为200像素 */
+    height: 700px; /* 元素高度为700像素 */
+    top: 105px; /* 元素距离定位参考元素（.cus）顶部105像素 */
+    right: 90px; /* 元素距离定位参考元素（.cus）右侧90像素 */
+}
+.cus>.chong{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.cus）进行定位 */
+    width: 100px; /* 元素宽度为100像素 */
+    height: 100px; /* 元素高度为100像素 */
+    top: 700px; /* 元素距离定位参考元素（.cus）顶部700像素 */
+    left: 53px; /* 元素距离定位参考元素（.cus）左侧53像素 */
+}
+.cus>.nong{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.cus）进行定位 */
+    width: 600px; /* 元素宽度为600像素 */
+    height: 300px; /* 元素高度为300像素 */
+    top: 550px; /* 元素距离定位参考元素（.cus）顶部550像素 */
+    right: 220px; /* 元素距离定位参考元素（.cus）右侧220像素 */
+    z-index: 1; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较下层 */
+}
+.cus>.tree2{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.cus）进行定位 */
+    width: 220px; /* 元素宽度为220像素 */
+    height: 400px; /* 元素高度为400像素 */
+    top: 90px; /* 元素距离定位参考元素（.cus）顶部90像素 */
+    left: 120px; /* 元素距离定位参考元素（.cus）左侧120像素 */
+}
+
+.qa{
+    position: relative; /* 元素采用相对定位，相对于自身正常位置进行定位，可作为绝对定位子元素的参考 */
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    width: 100%; /* 元素宽度占满父元素的宽度 */
+    height: 1000px; /* 元素高度为1000像素 */
+    justify-content: center; /* 子元素在主轴（水平方向）上居中对齐 */
+}
+.qa>.qa-box{
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    width: 90%; /* 元素宽度为父元素宽度的90% */
+    height:1000px; /* 元素高度为1000像素 */
+    border: 5px solid blue; /* 元素边框为5像素宽，颜色为蓝色的实线 */
+    border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+    justify-content: center; /* 子元素在主轴（水平方向）上居中对齐 */
+    background-image: url(background_QA.png); /* 设置元素的背景图片为指定路径的图片（需确保路径正确） */
+    background-size: cover; /* 背景图片按比例缩放，以完全覆盖元素的背景区域 */
+}
+.qa-box>.qa-text{
+    display: flex; /* 使用弹性盒布局，使子元素在一行（默认水平方向，可调整）排列并可控制其分布 */
+    width: 60%; /* 元素宽度为父元素宽度的60% */
+    height: 1000px; /* 元素高度为1000像素 */
+    flex-direction: column; /* 子元素以垂直方向排列 */
+    justify-content: flex-start; /* 子元素在主轴（垂直方向，因为flex-direction: column）上靠起始位置对齐 */
+}
+.qa-text>h1{
+    text-align: center; /* 文本在水平方向上居中对齐 */
+    font-size: 50px; /* 文本字体大小为50像素 */
+}
+.qa-text>.ques{
+    font-size: 30px; /* 文本字体大小为30像素 */
+    transition: transform 0.3s ease; /* 当元素发生变换（如缩放、旋转等）时，在0.3秒内以ease模式（平缓的过渡效果）完成过渡 */
+    cursor: pointer; /* 鼠标悬停在元素上时，指针样式变为指针（手形），表示可点击 */
+}
+.ques:hover{
+    transform: scale(1.1); /* 当鼠标悬停在.ques元素上时，元素在水平和垂直方向上同时放大到原来的1.1倍 */
+    opacity: 0.5; /* 当鼠标悬停在.ques元素上时，元素的透明度变为0.5，呈现半透明效果 */
+}
+
+.qa-text>.answer{
+    position: relative; /* 元素采用相对定位，相对于自身正常位置进行定位 */
+    width: 100%; /* 元素宽度占满父元素的宽度 */
+    height: auto; /* 元素高度根据内容自动调整 */
+    font-size: 25px; /* 文本字体大小为25像素 */
+    background-color: #839fdd; /* 元素背景颜色为指定十六进制值 */
+    color:white; /* 元素文本颜色为白色 */
+    border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+    padding: 5px; /* 元素内部内边距为5像素，上下左右均是 */
+}
+
+.end{
+    width: 100%; /* 元素宽度占满父元素的宽度 */
+    height: 70px; /* 元素高度为70像素 */
+    font-size: 10px; /* 文本字体大小为10像素 */
+    text-align: center; /* 文本在水平方向上居中对齐 */
+    margin-top: 100px; /* 元素上方外边距为100像素，与上方元素间隔100像素 */
+    background-color: #d9d9d9; /* 元素背景颜色为指定十六进制值 */
+}
+
+.point{
+    position: fixed; /* 元素采用固定定位，相对于浏览器窗口定位，不随页面滚动而移动 */
+    width: 50px; /* 元素宽度为50像素 */
+    height: 50px; /* 元素高度为50像素 */
+    right: 50px; /* 元素距离浏览器窗口右侧50像素 */
+    bottom: 75px; /* 元素距离浏览器窗口底部75像素 */
+    z-index: 5; /* 设置元素的堆叠顺序，数值越大越在上面，这里表示该元素在堆叠顺序中处于较上层 */
+    overflow: hidden; /* 超出元素尺寸的内容将被隐藏 */
+}
+
+.point div{
+    position: absolute; /* 元素采用绝对定位，相对于最近的已定位祖先元素（这里是.point）进行定位 */
+    width: 45px; /* 元素宽度为45像素 */
+    height: 45px; /* 元素高度为45像素 */
+    border: 3px solid black; /* 元素边框为3像素宽，颜色为黑色的实线 */
+    border-radius: 20px; /* 为元素的四个角设置20像素的圆角半径，使边角变圆滑 */
+    background-color: #839fdd; /* 元素背景颜色为指定十六进制值 */
+    transition: all 0.5s; /* 当元素的所有属性发生变化时，在0.5秒内完成过渡 */
+}
+.point1{
+    top: 0px; /* 元素距离定位参考元素（.point）顶部0像素 */
+    left: 0px; /* 元素距离定位参考元素（.point）左侧0像素 */
+    text-align: center; /* 文本在水平方向上居中对齐 */
+}
+.point1 i{
+    font-size: 30px; /* 字体图标大小为30像素 */
+}
+.point:hover .point1{
+    top: -50px; /* 当鼠标悬停在.point元素上时，.point1元素在垂直方向上向上移动50像素 */
+    left: 0px; /* 当鼠标悬停在.point元素上时，.point1元素在水平方向上位置不变 */
+}
+
+
+.point2{
+    top: 50px; /* 元素距离定位参考元素（.point）顶部50像素 */
+    left: 0px; /* 元素距离定位参考元素（.point）左侧0像素 */
+    text-align: center; /* 文本在水平方向上居中对齐 */
+    background-color: #3e8e41; /* 元素背景颜色为指定十六进制值 */
+}
+.point2 i{
+    font-size: 30px; /* 字体图标大小为30像素 */
+}
+.point:hover .point2{
+    top: 0px; /* 当鼠标悬停在.point元素上时，.point2元素在垂直方向上向下移动50像素 */
+    left: 0px; /* 当鼠标悬停在.point元素上时，.point2元素在水平方向上位置不变 */
+}
+.point i{
+    display: inline-block; /* 设置为内联块级元素，可设置宽高且不独占一行 */
+    margin-top: -100%; /* 元素上方外边距为自身高度的-100%，用于调整位置 */
+    margin-bottom: auto; /* 元素下方外边距自动调整 */
+    line-height: normal; /* 设置正常的行高 */
+    width: 95%; /* 元素宽度为自身的95% */
+    text-align: center; /* 文本在水平方向上居中对齐 */
+    font-size: 24px; /* 字体图标大小为24像素 */
+}
