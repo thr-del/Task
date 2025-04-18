@@ -19,4 +19,4 @@
 ### 5.[点这里看网页](https://thr-del.github.io/Task/)
 ***
 ## 第四阶段笔记
-### 1.[复刻网页HTML](http://github.com/thr-del/Task/blob/master/geek.html)
+### 1.[复刻网页HTML](http://github.com/thr-del/Task/blob/master/html+css+js/geek.html)
