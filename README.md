@@ -25,4 +25,4 @@
 ### 4 .[点这里看网页](https://thr-del.github.io/Task/html+css+js/geek.html)
 ***
 ## 第五阶段笔记
-### 1.[靶场1-10关+自己的思考](http://github.com/thr-del/Task/blob/master/靶场1-10解题技巧+自己的思考.md)
+### 1.[靶场1-10关+自己的思考](http://github.com/thr-del/Task/blob/master/靶场1-10解题思路+自己的思考.md)
