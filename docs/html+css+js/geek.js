@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
     // 为 emailButton 元素添加点击事件监听器
     emailButton.addEventListener("click", (event) => {
-        // 阻止按钮的默认行为（例如提交表单等行为）
+        // 阻止按钮的默认行为
         event.preventDefault();
         // 将 emailPopup 元素的显示样式设置为 block，即显示弹出框
         emailPopup.style.display='block';
