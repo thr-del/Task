@@ -26,3 +26,6 @@
 ***
 ## 第五阶段笔记
 ### 1.[靶场1-10关+自己的思考](http://github.com/thr-del/Task/blob/master/靶场1-10解题思路+自己的思考.md)
+***
+## 第六阶段笔记
+### 1.[Python基础学习](http://github.com/thr-del/Task/blob/master/Python基础学习.md)
