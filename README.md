@@ -29,3 +29,8 @@
 ***
 ## 第六阶段笔记
 ### 1.[Python基础学习](http://github.com/thr-del/Task/blob/master/Python基础学习.md)
+### 2.[Python爬虫基础](http://github.com/thr-del/Task/blob/master/Python爬虫基础.md)
+### 3.[一个简单的爬虫脚本](http://github.com/thr-del/Task/blob/master/scrape_douban.py)
+***
+## 第七阶段笔记
+### 1.[网络资产测绘系统基础](http://github.com/thr-del/Task/blob/master/网络资产测绘系统基础.md)
