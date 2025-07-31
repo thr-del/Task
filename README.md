@@ -44,4 +44,4 @@
 ***
 ## 第九阶段笔记
 ### 1.[Web指纹基础:基本识别方法+WhatWeb/Wapplyzer使用+意义](http://github.com/thr-del/Task/blob/master/Web指纹基础.md)
-### 2.[web指纹识别小工具](http://github.com/thr-del/Task/blob/master/web指纹.py)
+### 2.[Web指纹识别小工具](http://github.com/thr-del/Task/blob/master/web指纹.py)
