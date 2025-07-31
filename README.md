@@ -42,5 +42,5 @@
 ### 4.[例：基于sql-libs靶场第一关的POC编写-基于错误信息的SQL注入检测](http://github.com/thr-del/Task/blob/master/SQL1.py)
 ### 4.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测](http://github.com/thr-del/Task/blob/master/SQL2.py)
 ***
-## 第就阶段笔记
-### 1.[Web基础:](http://github.com/thr-del/Task/blob/master/Web基础.md)
+## 第九阶段笔记
+### 1.[Web指纹基础:](http://github.com/thr-del/Task/blob/master/Web指纹基础.md)
