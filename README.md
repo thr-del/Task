@@ -36,5 +36,5 @@
 ### 1.[网络资产测绘系统基础](http://github.com/thr-del/Task/blob/master/网络资产测绘系统基础.md)
 ***
 ## 第八阶段笔记
-### 1.[POC基础(基本编写验证思想+三种SQL注入型POC编写+两种XSS攻击型POC编写)](http://github.com/thr-del/Task/blob/master/POC基础.md)
+### 1.[POC基础](基本编写验证思想+三种SQL注入型POC编写+两种XSS攻击型POC编写)](http://github.com/thr-del/Task/blob/master/POC基础.md)
 ### 2.[例：基于xss靶场第四关的POC编写](http://github.com/thr-del/Task/blob/master/XSS POC.py)
