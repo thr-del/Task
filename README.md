@@ -40,7 +40,8 @@
 ### 2.[例：基于xss靶场第四关的POC编写](https://github.com/thr-del/Task/blob/master/XSS%20POC.py)
 ### 3.[例：基于xss靶场第六关的POC编写](https://github.com/thr-del/Task/blob/master/XSS%20POC%201.py)
 ### 4.[例：基于sql-libs靶场第一关的POC编写-基于错误信息的SQL注入检测](http://github.com/thr-del/Task/blob/master/SQL1.py)
-### 4.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测](http://github.com/thr-del/Task/blob/master/SQL2.py)
+### 5.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测](http://github.com/thr-del/Task/blob/master/SQL2.py)
 ***
 ## 第九阶段笔记
 ### 1.[Web指纹基础:基本识别方法+WhatWeb/Wapplyzer使用+意义](http://github.com/thr-del/Task/blob/master/Web指纹基础.md)
+### 2.[Web指纹识别小工具](http://github.com/thr-del/Task/blob/master/Web指纹.py)
