@@ -43,4 +43,4 @@
 ### 4.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测](http://github.com/thr-del/Task/blob/master/SQL2.py)
 ***
 ## 第九阶段笔记
-### 1.[Web指纹基础:](http://github.com/thr-del/Task/blob/master/Web指纹基础.md)
+### 1.[Web指纹基础:基本识别方法+WhatWeb/Wapplyzer使用+意义](http://github.com/thr-del/Task/blob/master/Web指纹基础.md)
