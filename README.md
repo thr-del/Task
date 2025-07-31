@@ -38,8 +38,9 @@
 ## 第八阶段笔记
 ### 1.[POC基础:基本编写验证思想+三种SQL注入型POC编写+两种XSS攻击型POC编写](http://github.com/thr-del/Task/blob/master/POC基础.md)
 ### 2.[例：基于xss靶场第四关的POC编写](https://github.com/thr-del/Task/blob/master/XSS%20POC.py)
-### 3.[例：基于xss靶场第六关的POC编写]()
-### 4.[例：基于sql-libs靶场第一关的POC编写-基于错误信息的SQL注入检测]()
-### 4.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测]()
+### 3.[例：基于xss靶场第六关的POC编写](https://github.com/thr-del/Task/blob/master/XSS%20POC%201.py)
+### 4.[例：基于sql-libs靶场第一关的POC编写-基于错误信息的SQL注入检测](http://github.com/thr-del/Task/blob/master/SQL1.py)
+### 4.[例：基于sql-libs靶场第二关的POC编写-关于时间盲注漏洞检测](http://github.com/thr-del/Task/blob/master/SQL2.py)
 ***
+## 第就阶段笔记
 ### 1.[Web基础:](http://github.com/thr-del/Task/blob/master/Web基础.md)
